@@ -7,23 +7,32 @@ const empLeaveSchema = new mongoose.Schema({
   },
   empCasualLeaves: {
     type: String,
-    return: true,
+    default:"10",
   },
   empSickLeaves: {
     type: String,
-    return: true,
+    default:"10",
   },
   empLeaveType: {
     type: String,
-    return: true,
+    default:"casual",
   },
-  empStatus: {
+  empLeaveStatus: {
     type: String,
-    return: true,
+    enum:["accepted","rejected","pending"],
+    default:"pending",
   },
   empMessage: {
     type: String,
-    return: true,
+    default:"0",
+  },
+  startDate:{
+   type:Date,
+   require:true,
+  },
+  endDate:{
+ type:String,
+ require:true,
   },
   employeeId: {
     type: mongoose.Types.ObjectId,
@@ -31,8 +40,8 @@ const empLeaveSchema = new mongoose.Schema({
     return: true,
   },
   isActiavte: {
-    type: String,
-    return: true,
+    type: Boolean,
+    default: true,
   },
 });
 empLeaveSchema.set("timestamps", true);

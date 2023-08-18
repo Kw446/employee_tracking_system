@@ -45,7 +45,7 @@ const empValSchema = {
         .message("Invalid mobill number")
         .required(),
       empCity: joi.string().required(),
-      empGender: joi.string().valid('male','female').required(),
+      empGender: joi.string().valid("male", "female").required(),
       empAdress: joi.string().required(),
       empWorkingStatus: joi.string().required(),
       empTechnology: joi.string().required(),

@@ -1,4 +1,4 @@
-const employeeSchema = require("../model/employeeSchema");
+const employeeSchema = require("../../model/employeeSchema");
 const empValScehma = require("./empValSchema");
 const Schema = require("./empValSchema");
 const { unlinkSync } = require("fs");

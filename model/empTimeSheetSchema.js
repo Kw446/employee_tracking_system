@@ -3,19 +3,19 @@ const mongoose = require("mongoose");
 const empTimeSheetSchema = mongoose.Schema({
   empClockIn: {
     type: String,
-    return: true,
+    default:"",
   },
   empClockOut: {
     type: String,
-    return: true,
+    default:"",
   },
   empClockInIp: {
     type: String,
-    return: true,
+    default:"",
   },
   empHourseLogged: {
     type: String,
-    return: true,
+    default:"0",
   },
   empWorkingFrom: {
     type: String,
@@ -23,31 +23,35 @@ const empTimeSheetSchema = mongoose.Schema({
   },
   empTotalWorkingDays: {
     type: String,
-    return: true,
+    default:"0",
   },
   empDaysPresent: {
     type: String,
-    return: true,
+    default:"",
   },
   empHalfDays: {
     type: String,
-    return: true,
+    default:"Active",
   },
   empDaysAbsent: {
     type: String,
-    return: true,
+    default:"",
   },
   empDaysLate: {
     type: String,
-    return: true,
+    default:"0",
   },
   empHolidays: {
     type: String,
-    return: true,
+    default:"",
   },
   empStatus: {
     type: String,
-    return: true,
+    default:"",
+  },
+  workingStatus: {
+    type: String,
+    default:"",
   },
   employeeId: {
     type: mongoose.Types.ObjectId,
